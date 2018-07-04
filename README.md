@@ -18,7 +18,7 @@ To generate the data required to analyze the validity of our probability, we fol
 
 1. We picked 4 different securities, namely: SPY, AMZN, GLD and XBI. SPY is the SP500 index fund, which has the lowest volatility among all the selected securities. AMZN (Amazon) and XBI (US Biotech Sector Index Fund) are highly volatile securities but still has a strong upwards trend. Finally, there is GLD (Gold ETF). GLD is very special and actually behaves relatively unexpectedly. Prior to 2012, GLD has a strong upward trend but it went stagnant after that. While it is not very volatile, its trend is hard to predict.
 
-  We chose different securities because we wanted to make sure our probabilities is representative for all securities.
+   We chose different securities because we wanted to make sure our probabilities is representative for all securities.
 
 2. Next, we selected some of the simulation parameters to be the following:
   - The total number of trading days to simulate is 504 trading days(i.e. 2 years)
@@ -27,9 +27,9 @@ To generate the data required to analyze the validity of our probability, we fol
 
 3. With these parameters set, the next step is to simulate and compute the probabilities plus the actual 20 days return for each trading day *Tp*. We start by extracting all the price data and computing the technical indicators required. We start with the last date, which is 2018-01-01. The reason for starting with the last date first is to avoid getting the large amount of price data from the database for every single timestep.
 
-  Once the probability of *Tp* is computed, we save it to a list and remove all the price data and indicators associated with *Tp*. (This ensure our prediction algorithm does not contain any future data, which simulate the fact that the algorithm is living in the past). Then, we set `Tp = Tp -1`.
+   Once the probability of *Tp* is computed, we save it to a list and remove all the price data and indicators associated with *Tp*. (This ensure our prediction algorithm does not contain any future data, which simulate the fact that the algorithm is living in the past). Then, we set `Tp = Tp -1`.
 
-  This simulation stops when `Tp = 2016-01-01`.
+   This simulation stops when `Tp = 2016-01-01`.
 
 4. Once the simulation stops, we store the useful output into a JSON file and include it into this project for analysis purposes.
 
