@@ -58,18 +58,22 @@ Based on the above results, we are quite confident that using probabilities is r
 
 ## Installation
 To start, create virtual environment:
+
 `virtualenv --python=python3.6 backtest-result-env`
 
 Next, we want to install the dependencies:
+
 `pip install -r requirements.txt`
 
 To enable plotting in your shell, please install the following package:
+
 `sudo apt-get install python-tk python3-tk tk-dev`
 
 Done.
 
 ## Execution
 Simply change directory to the cloned repo and run:
+
 `python analyze-data.py`
 
 ## Contact
